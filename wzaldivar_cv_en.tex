@@ -22,13 +22,13 @@
 
 \newcommand{\cvauthor}[1]{\renewcommand{\cvauthorvar}{#1}}
 
-\newcommand{\cvtitlelocation}[1]{\renewcommand{\cvtitlelocationvar}{\faMapMarker* #1}}
+\newcommand{\cvtitlelocation}[1]{\renewcommand{\cvtitlelocationvar}{#1}}
 
-\newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedinvar}{\faLinkedin\ \href{https://linkedin.com/in/#1}{#1}}}
+\newcommand{\cvlinkedin}[1]{\renewcommand{\cvlinkedinvar}{https://linkedin.com/in/#1}}
 
-\newcommand{\cvemail}[1]{\renewcommand{\cvemailvar}{\faEnvelope[regular] \href{mailto:#1}{\texttt{#1}}}}
+\newcommand{\cvemail}[1]{\renewcommand{\cvemailvar}{#1}}
 
-\newcommand{\cvphone}[2]{\renewcommand{\cvphonevar}{\faPhone* \href{#1}{\texttt{#2}}}}
+\newcommand{\cvphone}[2]{\renewcommand{\cvphonevar}{#2}}
 
 
 \newcommand{\cvtitle}{
@@ -37,8 +37,8 @@
     \vspace{8pt}
     
     \begin{tabular}{ll}
-      \cvtitlelocationvar & \cvlinkedinvar \\
-      \cvphonevar & \cvemailvar
+      \cvemailvar & \cvphonevar \\
+      \cvlinkedinvar & \cvtitlelocationvar
     \end{tabular}
   \end{center}
 }
@@ -330,7 +330,7 @@
 
 \begin{cvlang}
   \cvlangitem{Spanish}{Native}
-  \cvlangitem{English}{Upper intermediate - B2}
+  \cvlangitem{English}{Upper intermediate, B2}
 \end{cvlang}
 
 \end{document}
