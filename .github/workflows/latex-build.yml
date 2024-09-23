@@ -41,6 +41,8 @@ jobs:
           name: compiled-pdf
           path: ./
 
+      - run: gh release delete latest --cleanup-tag --yes
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
