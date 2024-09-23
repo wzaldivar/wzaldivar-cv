@@ -41,7 +41,10 @@ jobs:
           name: compiled-pdf
           path: ./
 
-      - run: gh release delete latest --cleanup-tag --yes
+      - name: Delete current Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release delete latest --cleanup-tag --yes
 
       - name: Create Release
         id: create_release
