@@ -58,6 +58,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./main.pdf  # Adjust path if needed
-          asset_name: main.pdf
+          asset_path: ./wzaldivar_cv_en.pdf
+          asset_name: wzaldivar_cv_en.pdf
           asset_content_type: application/pdf
