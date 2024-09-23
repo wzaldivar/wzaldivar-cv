@@ -1,21 +1,63 @@
-  name: Publish CV
+name: LaTeX Build and Release
 
-  on:
-    push:
-      branches:
-        - main
+on:
+  push:
+    branches:
+      - main  # Run this action on pushes to the main branch
 
-  jobs:
-    build:
-      name: LaTeX to PDF
-      runs-on: ubuntu-latest
+jobs:
+  build:
+    name: Compile LaTeX to PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up LaTeX
+        uses: dante-ev/latex-action@v2
+        with:
+          root_file: main.tex  # Change this to your main LaTeX file
+          compiler: latexmk
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-pdf
+          path: ./main.pdf  # Adjust path if needed
+
+  release:
+    name: Release PDF
+    needs: build
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: LateX to PDF
-        uses: dante-ev/latex-action@latest
+
+      - name: Download artifact
+        uses: actions/download-artifact@v3
         with:
-          root_file: wzaldivar_cv_en.tex
-          compiler: pdflatex
+          name: compiled-pdf
+          path: ./  # Download artifact to the root folder
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: latest
+          release_name: Latest Release
+          draft: false
+          prerelease: false
+
+      - name: Upload PDF to Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./main.pdf  # Adjust path if needed
+          asset_name: main.pdf
+          asset_content_type: application/pdf
