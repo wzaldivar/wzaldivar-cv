@@ -1,0 +1,21 @@
+name: Publish CV
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: LaTeX to PDF
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: LateX to PDF
+      uses: dante-ev/latex-action@latest
+      with:
+        root_file: wzaldivar_cv_en.tex
+        compiler: pdflatex
