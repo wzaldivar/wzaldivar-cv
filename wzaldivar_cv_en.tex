@@ -41,16 +41,18 @@
     and reliability-focused architecture across IoT, fintech, and SaaS platforms.
   \fi
 
-  \ifcpp%
+  \onlyCpp{%
     Senior Software Engineer with 15+ years of experience in embedded systems,
-    device-level development, and backend platforms. Strong C/C++ background,
-    with practical experience in Android firmware, JNI integrations, and
-    interaction with hardware and low-level system components.
+    low-level software, and backend platforms. Strong C/C++ background with
+    hands-on experience in Android firmware, JNI integrations, and direct
+    interaction with hardware and native system components.
 
-    Skilled in Linux environments, troubleshooting complex issues across software
-    layers, and integrating systems involving multiple protocols and devices.
-    Motivated by low-level problem solving and eager to deepen expertise in
-    hardware-near development and diagnostics. \fi
+    Experienced in bridging high-level applications with native code, working
+    across Java/Kotlin and C++ boundaries to deliver reliable,
+    performance-sensitive systems. Background includes malware analysis through PE
+    file structure heuristics integrated into antivirus systems, development of
+    device-level payment solutions, and real-time data processing in constrained
+    environments. }
 
   \ifjava%
   \fi
@@ -153,265 +155,341 @@
   }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Software Developer Engineer}{SensorData}
-    \cvLocation{Remote (part-time)}{\cvDate{10}{2022}}{\cvDate{9}{2023}}
+  \onCpp{%
+    \begin{cvJob}
+      \cvPosition{Senior Software Developer Engineer}{SensorData}
+      \cvLocation{Remote (part-time)}{\cvDate{10}{2022}}{\cvDate{9}{2023}}
 
-    \begin{itemize}
+      \begin{itemize}
+        \item Led the Android platform development for custom embedded devices, working in a
+              small team to integrate Kotlin-based applications with native C++ sensor
+              libraries
 
-      \item Led the migration of React Native Android applications to Kotlin for custom
-            Android devices, improving performance and adhering to best practices
-            \cvSkills{Kotlin, Hilt, Room, MQTT, Retrofit, OkHttp, Moshi, Git}
+        \item Designed and implemented JNI bridges to enable communication between Android
+              applications and low-level C++ components handling sensor data and device logic
+              \cvSkills{C/C++, JNI, Kotlin, Android}
 
-    \end{itemize}
-  \end{cvJob}
+        \item Collaborated closely with C++ developers responsible for sensor integration,
+              ensuring correct data flow, performance, and stability across the Java/native
+              boundary
 
-  %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Software Developer Engineer}{BairesDev}
-    \cvLocation{Remote}{\cvDate{11}{2021}}{\cvDate{3}{2023}}
+        \item Contributed to performance improvements and system reliability by diagnosing
+              cross-layer issues between managed and native code
 
-    \begin{itemize}
-
-      %-------------------------------------------------------------------------
-      \item Staff augmentation, Background Screening Services Provider, \emph{US Client}\\
-            \cvTimeLapse{\cvDate{11}{2021}}{\cvDate{2}{2023}}
-
-            \begin{itemize}
-
-              \item Contributed to the migration of a legacy desktop solution to web-based platform
-                    \cvSkills{Kotlin, Spring Boot, JUnit5, Mockito, Docker, GraphQL, PostgreSQL,
-                      TypeScript, React, Git}
-
-            \end{itemize}
-
-            %-------------------------------------------------------------------------
-      \item Bench, \cvDate{3}{2023}
-
-            \begin{itemize}
-
-              \item Self-training on Git, Java, Angular, SQL, and AWS during the bench period
-                    \cvSkills{Git, Java, Angular, SQL, AWS}
-
-            \end{itemize}
-
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Software Developer Engineer}{Endava}
-    \cvLocation{Remote}{\cvDate{1}{2021}}{\cvDate{10}{2021}}
+  \onJava{%
+    \begin{cvJob}
+      \cvPosition{Senior Software Developer Engineer}{BairesDev}
+      \cvLocation{Remote}{\cvDate{11}{2021}}{\cvDate{3}{2023}}
 
-    \begin{itemize}
+      \begin{itemize}
 
-      %-------------------------------------------------------------------------
-      \item Bench, \cvTimeLapse{\cvDate{1}{2021}}{\cvDate{2}{2021}}
+        %-------------------------------------------------------------------------
+        \item Staff augmentation, Background Screening Services Provider, \emph{US Client}\\
+              \cvTimeLapse{\cvDate{11}{2021}}{\cvDate{2}{2023}}
 
-            \begin{itemize}
+              \begin{itemize}
 
-              \item Led a small team in developing a toy calendar project to enhance skills during
-                    the bench period \cvSkills{Java, Spring Boot, Jacoco, SonarQube}
+                \item Contributed to the migration of a legacy desktop solution to web-based platform
+                      \cvSkills{Kotlin, Spring Boot, JUnit5, Mockito, Docker, GraphQL, PostgreSQL,
+                        TypeScript, React, Git}
 
-            \end{itemize}
+              \end{itemize}
 
-            %-------------------------------------------------------------------
-      \item Staff augmentation, Global Provider of Electronic Payments Solutions,
-            \cvTimeLapse{\cvDate{3}{2021}}{\cvDate{6}{2021}}
+              %-------------------------------------------------------------------------
+        \item Bench, \cvDate{3}{2023}
 
-            \begin{itemize}
+              \begin{itemize}
 
-              \item Contributed to the customization, features implementation, and bug-fixing of
-                    payment devices software \cvSkills{C/C++, Python, Git}
+                \item Self-training on Git, Java, Angular, SQL, and AWS during the bench period
+                      \cvSkills{Git, Java, Angular, SQL, AWS}
 
-              \item Implemented an \emph{ISO8583} messages parser to enhance QA productivity for
-                    the Endava QA team \cvSkills{Python}
+              \end{itemize}
 
-            \end{itemize}
-
-            %-------------------------------------------------------------------
-      \item Staff augmentation, Health Care Services Provider -- Integration Team (\emph{US
-              Client}),\\ \cvTimeLapse{\cvDate{6}{2021}}{\cvDate{10}{2021}}
-
-            \begin{itemize}
-
-              \item Contributed to the development of software integration with external vendors
-                    \cvSkills{Java, Spring Boot, JUnit5, Mockito, Kafka}
-
-            \end{itemize}
-
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Software Developer Engineer}{Hipcam}
-    \cvLocation{Montevideo, Uruguay}{\cvDate{11}{2018}}{\cvDate{10}{2020}}
+  \onCppOrJava{%
+    \begin{cvJob}
+      \cvPosition{Senior Software Developer Engineer}{Endava}
+      \cvLocation{Remote}{\cvDate{1}{2021}}{\cvDate{10}{2021}}
 
-    \begin{itemize}
+      \begin{itemize}
 
-      \item Joined the \emph{Cameras} group, contributing to the development and continuous
-            improvement of Android firmware applications for Hipcam \cvSkills{Java, Kotlin,
-              C/C++, Retrofit, OkHttp, Webhooks, Git}
+        %-----------------------------------------------------------------------
+        \onlyJava{%
+        \item Bench, \cvTimeLapse{\cvDate{1}{2021}}{\cvDate{2}{2021}}
 
-      \item Led the re-implementation of the remote Android firmware applications update
-            system, enhancing reliability and recovery options \cvSkills{Java, Kotlin,
-              C/C++, Retrofit, OkHttp, Webhooks, Git}
+              \begin{itemize}
 
-      \item Managed Jenkins Server for custom Android firmware applications builds,
-            ensuring seamless collaboration across teams \cvSkills{Jenkins, Docker}
+                \item Led a small team in developing a toy calendar project to enhance skills during
+                      the bench period \cvSkills{Java, Spring Boot, Jacoco, SonarQube}
 
-    \end{itemize}
-  \end{cvJob}
+              \end{itemize}
+              }
 
-  %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Software Developer Engineer}{Verifone}
-    \cvLocation{Montevideo, Uruguay}{\cvDate{5}{2018}}{\cvDate{11}{2018}}
+              %-----------------------------------------------------------------
+              \onlyCpp{%
+        \item Staff augmentation, Global Provider of Electronic Payments Solutions,
+              \cvTimeLapse{\cvDate{3}{2021}}{\cvDate{6}{2021}}
 
-    \begin{itemize}
+              \begin{itemize}
 
-      \item Contributed to the \emph{Web} group, developing the management system for
-            Verifone's internal customers \cvSkills{Java/JEE, PrimeFaces, Git}
+                \item Contributed to the development and customization of payment device software,
+                      working at the device and protocol level for transaction processing
+                      \cvSkills{C/C++, ISO8583, Embedded Systems, Git}
 
-      \item Developed automated tests for the management system and managed virtual machine
-            images for testing \cvSkills{Java/JEE, Docker, Selenium}
+                \item Independently designed and implemented an ISO8583 message parser to support QA
+                      workflows, enabling efficient inspection and validation of transaction data
+                      during testing \cvSkills{Python, ISO8583}
 
-    \end{itemize}
-  \end{cvJob}
+              \end{itemize}
+              }
 
-  %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Java Software Developer}{Scanntech}
-    \cvLocation{Montevideo, Uruguay}{\cvDate{8}{2014}}{\cvDate{4}{2018}}
+              %-------------------------------------------------------------------
+              \onlyJava{%
+        \item Staff augmentation, Health Care Services Provider -- Integration Team (\emph{US
+                Client}),\\ \cvTimeLapse{\cvDate{6}{2021}}{\cvDate{10}{2021}}
 
-    \begin{itemize}
+              \begin{itemize}
 
-      \item Contributed to the iPOS Android project, enhancing application logic, managing
-            electronic payments, and developing new device drivers \cvSkills{Java, SQLite,
-              SVN, Git}
+                \item Contributed to the development of software integration with external vendors
+                      \cvSkills{Java, Spring Boot, JUnit5, Mockito, Kafka}
 
-      \item Played a key role in the Scann+ project, designing a generic parser for fiscal
-            printers used in BrazilReduced development time by \emph{70\%} \cvSkills{Java,
-              Git}
+              \end{itemize}
+              }
 
-      \item Collaborated in developing microservices for monetary transactions with REST
-            interfaces \cvSkills{Python, Django, PostgreSQL, Git}
-
-      \item Developed software for the \emph{MPOS PAX D200} pinpad \cvSkills{C/C++, CMake,
-              libcurl, c-ares, Mbed TLS, Git}
-
-      \item Integrated EMV transactions for the \emph{Pax S300} pinpad \cvSkills{C, Java,
-              Git}
-
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Support Technician for Servers and Networking}{Infoland}
-    \cvLocation{Montevideo, Uruguay}{\cvDate{11}{2013}}{\cvDate{7}{2014}}
+  \onCppOrJava{%
+    \begin{cvJob}
+      \cvPosition{Senior Software Developer Engineer}{Hipcam}
+      \cvLocation{Montevideo, Uruguay}{\cvDate{11}{2018}}{\cvDate{10}{2020}}
 
-    \begin{itemize}
+      \begin{itemize}
+        \item Worked on Android-based firmware for camera devices, collaborating in a small
+              senior team responsible for both application and native layers
 
-      \item Provided technical support to customers and internal team members
-            \cvSkills{Windows Server, Linux}
+        \item Designed and implemented JNI bridges between Android (Java/Kotlin) and native
+              C++ components for video streaming and device interaction \cvSkills{JNI, C/C++,
+                Java, Kotlin}
 
-      \item Contributed to the assembly, installation, and maintenance of networks,
-            servers, and personal computers \cvSkills{Windows Server, Linux}
+        \item Contributed to integration with native video encoding and device-level
+              functionality, enabling efficient communication between high-level application
+              logic and low-level components \cvSkills{C/C++, Android, Firmware}
 
-    \end{itemize}
-  \end{cvJob}
+        \item Led the re-implementation of the remote firmware update system, improving
+              reliability and recovery mechanisms \cvSkills{Java, Kotlin, Networking}
 
-  %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{C++ Software Developer}{Segurmatica}
-    \cvLocation{Havana, Cuba}{\cvDate{3}{2011}}{\cvDate{6}{2013}}
+        \item Managed Jenkins pipelines for custom Android firmware builds, supporting
+              cross-team development workflows \cvSkills{Jenkins, Docker}
 
-    \begin{itemize}
-      \item Key contributor to the Segurmatica Antivirus engine team, pioneering research
-            and development of heuristic methods for malware detectionSuccessfully
-            integrated these methods into Segurmatica Antivirus, achieving a consistent 5\%
-            detection rate on malware samples \cvSkills{C++, Python, MSSQL, Git}
-
-      \item Lead Author of \emph{"Addition of Heuristics Based on the Structure of the PE
-              Files to Segurmatica Antivirus,"} presented at XV Convention and International
-            Computer Fair 2013 -- Highlighted the methodology and tools utilized to enhance
-            Segurmatica Antivirus detection capabilities through heuristic methods
-
-      \item Contributed to the development of tools automating the processing of malware
-            samples \cvSkills{C\#, Git}
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Software Developer and IT Specialist}{Tourism Real Estate Company}
-    \cvLocation{Havana, Cuba}{\cvDate{10}{2008}}{\cvDate{2}{2011}}
+  \onJava{%
+    \begin{cvJob}
+      \cvPosition{Software Developer Engineer}{Verifone}
+      \cvLocation{Montevideo, Uruguay}{\cvDate{5}{2018}}{\cvDate{11}{2018}}
 
-    \begin{itemize}
-      \item Developed centralized software for critical decision-making in real estate
-            maintenance \cvSkills{Delphi, MSSQL, Mercurial}
-      \item Contributed to Linux and Windows server administration, and MSSQL Server
-            management \cvSkills{Ubuntu, Debian, Windows Server, MSSQL}
-    \end{itemize}
-  \end{cvJob}
+      \begin{itemize}
 
-  %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Instructor}{Youth Clubs of Computing and Electronics}
-    \cvLocation{Havana, Cuba}{\cvDate{10}{2006}}{\cvDate{9}{2008}}
+        \item Contributed to the \emph{Web} group, developing the management system for
+              Verifone's internal customers \cvSkills{Java/JEE, PrimeFaces, Git}
 
-    \begin{itemize}
-      \item Instructed entry-level software development in \emph{Delphi} and \emph{Visual
-              Basic} \cvSkills{Delphi, Visual Basic}
-      \item Conducted user-level training in \emph{MS Windows}, \emph{MS Access}, and
-            \emph{MS Excel}
-    \end{itemize}
-  \end{cvJob}
+        \item Developed automated tests for the management system and managed virtual machine
+              images for testing \cvSkills{Java/JEE, Docker, Selenium}
+
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Contract Developer}{Tanggo Software}
-    \cvLocation{Remote}{\cvDate{6}{2006}}{\cvDate{9}{2006}}
+  \onCppOrJava{%
+    \begin{cvJob}
+      \cvPosition{Software Developer Engineer}{Scanntech}
+      \cvLocation{Montevideo, Uruguay}{\cvDate{8}{2014}}{\cvDate{4}{2018}}
 
-    \begin{itemize}
-      \item Designed and implemented \emph{Tanggo Gestione Gastronomica}, software for
-            recipes management and custom menu printing \cvSkills{Delphi, MS Access}
-    \end{itemize}
-  \end{cvJob}
+      \begin{itemize}
+
+        \item Developed device communication layers for Android-based POS systems,
+              implementing protocols for interaction with payment peripherals and fiscal
+              devices \cvSkills{Java, Embedded Systems, Protocols}
+
+        \item Designed and implemented a real-time parser for fiscal printers, enabling
+              reliable processing of continuous data streams and reducing integration
+              complexity \cvSkills{Java, Parsing, Streaming Systems}
+
+        \item Built and maintained software for PAX payment terminals, including API
+              integration, cross-compilation, and low-level device interaction
+              \cvSkills{C/C++, CMake, Embedded Systems}
+
+        \item Integrated EMV transaction flows for payment devices, handling communication
+              between application logic and hardware-level interfaces \cvSkills{C, Java, EMV}
+
+        \item Collaborated on backend services for transaction processing and system
+              integration \cvSkills{Python, Django, PostgreSQL}
+
+      \end{itemize}
+    \end{cvJob}
+  }
+  %-----------------------------------------------------------------------------
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Senior Support Technician for Servers and Networking}{Infoland}
+      \cvLocation{Montevideo, Uruguay}{\cvDate{11}{2013}}{\cvDate{7}{2014}}
+
+      \begin{itemize}
+
+        \item Provided technical support to customers and internal team members
+              \cvSkills{Windows Server, Linux}
+
+        \item Contributed to the assembly, installation, and maintenance of networks,
+              servers, and personal computers \cvSkills{Windows Server, Linux}
+
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Contract Developer}{Freelance}
-    \cvLocation{Havana, Cuba}{\cvDate{5}{2005}}{\cvDate{8}{2005}}
+  \onCpp{%
+    \begin{cvJob}
+      \cvPosition{C++ Software Developer}{Segurmatica}
+      \cvLocation{Havana, Cuba}{\cvDate{3}{2011}}{\cvDate{6}{2013}}
 
-    \begin{itemize}
-      \item Developed \emph{Cafe Master}, software for stock management and sales recording
-            for a small coffee shop \cvSkills{Delphi, MS Access}
-    \end{itemize}
-  \end{cvJob}
+      \begin{itemize}
+        \item Designed and implemented heuristic-based malware detection methods based on
+              analysis of Portable Executable (PE) file structures \cvSkills{C++, Static
+                Analysis, PE Format}
+
+        \item Built a modular analysis pipeline for malware samples, including data
+              extraction, anomaly detection, and database-driven pattern analysis to identify
+              malicious behavior \cvSkills{C++, Python, MSSQL}
+
+        \item Developed internal tooling to extract structural and statistical features from
+              large sets of PE files, enabling identification of anomalies such as malformed
+              headers, entropy irregularities, and suspicious section layouts \cvSkills{C++,
+                MSSQL}
+
+        \item Contributed to the integration of heuristic detection algorithms into the
+              antivirus engine, improving detection of previously unknown malware samples
+
+        \item Co-authored and presented research on PE-structure-based heuristics at an
+              international conference, detailing methodology and implementation
+
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Scientist Intern}{Center of Radiation Protection and Hygiene}
-    \cvLocation{Havana, Cuba}{\cvDate{9}{2004}}{\cvDate{9}{2006}}
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Software Developer and IT Specialist}{Tourism Real Estate Company}
+      \cvLocation{Havana, Cuba}{\cvDate{10}{2008}}{\cvDate{2}{2011}}
 
-    \begin{itemize}
-      \item Completed thesis on software for dose estimation and potential effects on the
-            embryo/fetus due to maternal medical exposure \cvSkills{Delphi, MS Access}
+      \begin{itemize}
+        \item Developed centralized software for critical decision-making in real estate
+              maintenance \cvSkills{Delphi, MSSQL, Mercurial}
+        \item Contributed to Linux and Windows server administration, and MSSQL Server
+              management \cvSkills{Ubuntu, Debian, Windows Server, MSSQL}
+      \end{itemize}
+    \end{cvJob}
+  }
 
-      \item Joined the Research and Development Division post-graduation, contributing to
-            various projects in medical physics, evaluation, and internal contamination
-            dose estimation \cvSkills{Delphi, MS Access}
+  %-----------------------------------------------------------------------------
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Instructor}{Youth Clubs of Computing and Electronics}
+      \cvLocation{Havana, Cuba}{\cvDate{10}{2006}}{\cvDate{9}{2008}}
 
-      \item Taught radio diagnostic and internal contamination subjects to students of the
-            \emph{Higher Institute of Technologies and Applied Sciences}
+      \begin{itemize}
+        \item Instructed entry-level software development in \emph{Delphi} and \emph{Visual
+                Basic} \cvSkills{Delphi, Visual Basic}
+        \item Conducted user-level training in \emph{MS Windows}, \emph{MS Access}, and
+              \emph{MS Excel}
+      \end{itemize}
+    \end{cvJob}
+  }
 
-    \end{itemize}
-  \end{cvJob}
+  %-----------------------------------------------------------------------------
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Contract Developer}{Tanggo Software}
+      \cvLocation{Remote}{\cvDate{6}{2006}}{\cvDate{9}{2006}}
+
+      \begin{itemize}
+        \item Designed and implemented \emph{Tanggo Gestione Gastronomica}, software for
+              recipes management and custom menu printing \cvSkills{Delphi, MS Access}
+      \end{itemize}
+    \end{cvJob}
+  }
+
+  %-----------------------------------------------------------------------------
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Contract Developer}{Freelance}
+      \cvLocation{Havana, Cuba}{\cvDate{5}{2005}}{\cvDate{8}{2005}}
+
+      \begin{itemize}
+        \item Developed \emph{Cafe Master}, software for stock management and sales recording
+              for a small coffee shop \cvSkills{Delphi, MS Access}
+      \end{itemize}
+    \end{cvJob}
+  }
+
+  %-----------------------------------------------------------------------------
+  \onGeneral{%
+    \begin{cvJob}
+      \cvPosition{Scientist Intern}{Center of Radiation Protection and Hygiene}
+      \cvLocation{Havana, Cuba}{\cvDate{9}{2004}}{\cvDate{9}{2006}}
+
+      \begin{itemize}
+        \item Completed thesis on software for dose estimation and potential effects on the
+              embryo/fetus due to maternal medical exposure \cvSkills{Delphi, MS Access}
+
+        \item Joined the Research and Development Division post-graduation, contributing to
+              various projects in medical physics, evaluation, and internal contamination
+              dose estimation \cvSkills{Delphi, MS Access}
+
+        \item Taught radio diagnostic and internal contamination subjects to students of the
+              \emph{Higher Institute of Technologies and Applied Sciences}
+
+      \end{itemize}
+    \end{cvJob}
+  }
 
 \end{cvExperience}
+
+%-------------------------------------------------------------------------------
+\onlyCpp{%
+  \begin{cvAdditional}
+    \item Delivered production-grade backend services using Java and Kotlin across Spring
+    Boot, Micronaut, and Ratpack ecosystems, working on distributed systems and
+    integration-heavy platforms\cvSkills{Java, Kotlin, Spring Boot, Micronaut,
+      Ratpack}
+
+    \item Built custom data-binding and state management components in Delphi to replace
+    default data-aware behaviors, improving control over UI state transitions and
+    application consistency in database-driven systems \cvSkills{Delphi, MSSQL}
+
+    \item Designed a non-invasive UI layout system for Delphi by wrapping standard
+    components and delegating layout behavior, enabling composition-based
+    extensions without modifying underlying controls \cvSkills{Delphi, UI
+      Architecture, Composition}
+
+  \end{cvAdditional}
+}
 
 %-------------------------------------------------------------------------------
 \cvEducationBlock%
