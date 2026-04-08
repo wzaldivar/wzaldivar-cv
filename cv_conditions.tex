@@ -1,0 +1,28 @@
+%-------------------------------------------------------------------------------
+% select profile before building
+
+\newif\ifgeneral%
+\newif\ifjava%
+\newif\ifcpp%
+\newif\ifmobile%
+
+\generaltrue%
+\javafalse%
+\cppfalse%
+\mobilefalse%
+
+%-------------------------------------------------------------------------------
+\newif\ificons%
+\iconstrue% use \iconstrue or \iconsfalse
+
+\ificons%
+  \usepackage{fontawesome}
+\fi
+
+%-------------------------------------------------------------------------------
+\newif\ifclickable%
+\clickabletrue% user \clickabletrue or \clickablefalse
+
+\ifclickable%
+  \usepackage{hyperref}
+\fi

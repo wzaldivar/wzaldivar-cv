@@ -1,0 +1,93 @@
+%-------------------------------------------------------------------------------
+\newcommand{\cvInvalidMonth}{\emph{\textbf{invalid-month}}}
+
+\newcommand{\cvMonth}[1]{%
+    \ifcase#1 \cvInvalidMonth%
+    \or Jan%
+    \or Feb%
+    \or Mar%
+    \or Apr%
+    \or May%
+    \or Jun%
+    \or Jul%
+    \or Aug%
+    \or Sep%
+    \or Oct%
+    \or Nov%
+    \or Dec%
+    \else
+        \cvInvalidMonth%
+    \fi
+}
+
+\newcommand{\cvDate}[2]{%
+    \emph{\cvMonth{#1}} {#2}%
+}
+
+\newcommand{\cvPresent}{%
+    \emph{Present}%
+}
+
+\newcommand{\cvTimeLapse}[2]{%
+    #1 - #2%
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvPosition}[2]{%
+    \noindent\textbf{#1 at #2}\par%
+}
+
+\newcommand{\cvLocation}[3]{%
+    \noindent #1, #2 -- #3\par%
+}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvEducation}{%
+    \noindent{\large\textbf{Education:}}%
+    \begin{itemize}
+}{%
+    \end{itemize}
+    \bigskip
+}
+
+\newcommand{\cvEducationItem}[4]{%
+    \item \textbf{#1}, #2, #3\\#4
+}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvExperience}{%
+    \noindent{\large\textbf{%
+            \ifgeneral%
+                Work Experience:%
+            \else
+                Relevant Work Experience:%
+            \fi
+        }}
+    \medskip
+}{
+    \medskip
+}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvJob}{%
+    \begin{sloppypar}
+}{%
+    \end{sloppypar}
+    \bigskip
+}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvLanguage}{%
+    \noindent{\large\textbf{Languages:}}%
+    \begin{itemize}
+}{
+    \end{itemize}
+    \bigskip
+}
+
+\newcommand{\cvLanguageItem}[2]{%
+    \item \textbf{#1} -- \emph{#2}%
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvSkills}[1]{\texttt{(#1)}}

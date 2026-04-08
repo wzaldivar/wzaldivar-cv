@@ -1,0 +1,104 @@
+%-------------------------------------------------------------------------------
+\newcommand{\cvAuthorVar}{}
+\newcommand{\cvAuthor}[1]{\renewcommand{\cvAuthorVar}{#1}}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvAuthorLocationVar}{}
+\newcommand{\cvAuthorLocation}[1]{\renewcommand{\cvAuthorLocationVar}{#1}}
+
+\newcommand{\cvAuthorLocationUrl}{%
+  \ifclickable%
+    \href{https://www.google.com/maps/place/\cvAuthorLocationVar}{\cvAuthorLocationVar}%
+  \else
+    \cvAuthorLocationVar%
+  \fi
+}
+
+\newcommand{\cvTitleAuthorLocation}{%
+  \ificons%
+    \faMapMarker\ \cvAuthorLocationUrl%
+  \else
+    \cvAuthorLocationUrl%
+  \fi
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvLinkedinVar}{}
+\newcommand{\cvLinkedin}[1]{\renewcommand{\cvLinkedinVar}{#1}}
+
+\newcommand{\cvLinkedinProfile}{https://linkedin.com/in/\cvLinkedinVar}
+
+\newcommand{\cvLinkedinUrl}{%
+  \ifclickable%
+    \href{\cvLinkedinProfile}{%
+      \ificons%
+        \cvLinkedinVar%
+      \else
+        \cvLinkedinProfile%
+      \fi
+    }
+  \else
+    \cvLinkedinProfile%
+  \fi
+}
+
+\newcommand{\cvTitleLinkedin}{%
+  \ificons%
+    \faLinkedin\ \cvLinkedinUrl%
+  \else
+    \cvLinkedinUrl%
+  \fi
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvEmailVar}{}
+\newcommand{\cvEmail}[1]{\renewcommand{\cvEmailVar}{#1}}
+
+\newcommand{\cvEmailUrl}{%
+  \ifclickable%
+    \href{mailto:\cvEmailVar}{\cvEmailVar}%
+  \else
+    \cvEmailVar%
+  \fi
+}
+
+\newcommand{\cvTitleEmail}{%
+  \ificons%
+    \faEnvelopeO\ \cvEmailUrl%
+  \else
+    \cvEmailUrl%
+  \fi
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvPhoneVar}{}
+\newcommand{\cvPhone}[1]{\renewcommand{\cvPhoneVar}{#1}}
+
+\newcommand{\cvPhoneUrl}{%
+  \ifclickable%
+    \href{tel:\cvPhoneVar}{\cvPhoneVar}%
+  \else
+    \cvPhoneVar%
+  \fi
+}
+
+\newcommand{\cvTitlePhone}{%
+  \ificons%
+    \faPhone\ \cvPhoneUrl%
+  \else
+    \cvPhoneUrl%
+  \fi
+}
+
+%-------------------------------------------------------------------------------
+\newcommand{\cvTitle}{%
+  \begin{center}
+    {\Large\textbf{\cvAuthorVar}}
+    \vspace{8pt}
+
+    \begin{tabular}{ll}
+      \cvTitleEmail& \cvTitlePhone\\%
+      \cvTitleLinkedin& \cvTitleAuthorLocation%
+    \end{tabular}
+  \end{center}
+}
