@@ -64,7 +64,7 @@
             \fi
         }}
     \medskip
-}{
+}{%
     \medskip
 }
 
@@ -80,7 +80,7 @@
 \newenvironment{cvLanguage}{%
     \noindent{\large\textbf{Languages:}}%
     \begin{itemize}
-}{
+}{%
     \end{itemize}
     \bigskip
 }
@@ -91,3 +91,26 @@
 
 %-------------------------------------------------------------------------------
 \newcommand{\cvSkills}[1]{\texttt{(#1)}}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvCoreTech}{%
+    \noindent{\large\textbf{Core Technologies:}}%
+    \begin{itemize}
+}{%
+    \end{itemize}
+    \bigskip
+}
+
+\newcommand{\cvCoreTechItem}[2]{%
+    \item \textbf{#1:}\ \texttt{#2}%
+}
+
+%-------------------------------------------------------------------------------
+\newenvironment{cvSummary}{%
+    \noindent{\large\textbf{Proffesional Summary:}}%
+    \medskip
+    \begin{sloppypar}
+}{%
+    \end{sloppypar}
+    \bigskip
+}

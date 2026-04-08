@@ -14,7 +14,14 @@
 
 \input{cv_format.tex}
 
+\input{cv_education.tex}
+
+\input{cv_profiles.tex}
+
 %-------------------------------------------------------------------------------
+
+\singleProfile%
+
 \begin{document}
 
 \cvAuthor{Walber Zaldivar Herrera}
@@ -26,84 +33,124 @@
 \cvTitle%
 
 %-------------------------------------------------------------------------------
-\begin{cvEducation}
-  \cvEducationItem{Higher Institute of Technologies and Applied Sciences}
-  {Havana, Cuba}{\cvDate{7}{2004}}
-  {BEng. in Nuclear and Energy Technologies \emph{(Cum Laude)}}
+\begin{cvSummary}
+  \ifgeneral%
+    Senior Software Engineer with 15+ years of experience designing distributed systems,
+    embedded firmware, Android platforms, and JVM backend services.
+    Specialized in Kotlin/Spring ecosystems,system integrations,
+    and reliability-focused architecture across IoT, fintech, and SaaS platforms.
+  \fi
 
-  \cvEducationItem{Vocational Pre-University Institute of Exact Sciences V. I. Lenin}
-  {Havana, Cuba}{\cvDate{7}{1998}}
-  {High School}
-\end{cvEducation}
+  \ifcpp%
+    Senior Software Engineer with 15+ years of experience in embedded systems,
+    device-level development, and backend platforms. Strong C/C++ background,
+    with practical experience in Android firmware, JNI integrations, and
+    interaction with hardware and low-level system components.
+
+    Skilled in Linux environments, troubleshooting complex issues across software
+    layers, and integrating systems involving multiple protocols and devices.
+    Motivated by low-level problem solving and eager to deepen expertise in
+    hardware-near development and diagnostics. \fi
+
+  \ifjava%
+  \fi
+
+  \ifmobile%
+  \fi
+\end{cvSummary}
+
+%-------------------------------------------------------------------------------
+\begin{cvCoreTech}
+  \ifgeneral%
+    \cvCoreTechItem{Languages \& Platforms}{Kotlin, Java, Scala, C/C++, Python, TypeScript}
+    \cvCoreTechItem{Backend}{Spring Boot, Micronaut, Ratpack, Camunda, Django}
+    \cvCoreTechItem{Mobile \& Embedded}{Android, JNI integrations, Firmware systems}
+    \cvCoreTechItem{Messaging \& Protocols}{Kafka, MQTT, ISO8583}
+    \cvCoreTechItem{Databases}{PostgreSQL, DynamoDB, MySQL, SQLite}
+    \cvCoreTechItem{DevOps \& Tooling}{Docker, Jenkins, GitHub Actions, Testcontainers, Grafana, AWS}
+    \cvCoreTechItem{Testing}{JUnit5, Mockito, Integration Testing, Mountebank}
+  \fi
+
+  \ifcpp%
+    \cvCoreTechItem{Languages}{C/C++, Kotlin, Java, Python}
+    \cvCoreTechItem{Systems}{Linux, JNI, Firmware-level integration}
+    \cvCoreTechItem{Tools}{GDB (basic exposure), Git, Docker}
+    \cvCoreTechItem{Protocols}{MQTT, ISO8583}
+  \fi
+\end{cvCoreTech}
 
 %-------------------------------------------------------------------------------
 \begin{cvExperience}
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Senior Software Developer Engineer}{Blue Trail Software}
-    \cvLocation{Remote}{\cvDate{6}{2024}}{\cvDate{2}{2026}}
-    \begin{itemize}
+  \onJava{%
+    \begin{cvJob}
+      \cvPosition{Senior Software Developer Engineer}{Blue Trail Software}
+      \cvLocation{Remote}{\cvDate{6}{2024}}{\cvDate{2}{2026}}
+      \begin{itemize}
 
-      %-------------------------------------------------------------------------
-      \item Staff augmentation, IOT Integration Provider -- \emph{Developers Console Team},
-            \emph{US Client}\\ \cvTimeLapse{\cvDate{6}{2024}}{\cvDate{12}{2025}}
+        %-------------------------------------------------------------------------
+        \item Staff augmentation, IOT Integration Provider -- \emph{Developers Console Team},
+              \emph{US Client}\\ \cvTimeLapse{\cvDate{6}{2024}}{\cvDate{12}{2025}}
 
-            \begin{itemize}
+              \begin{itemize}
 
-              \item Extended and maintained proxy and upstream services to orchestrate backend
-                    calls, enable third-party IoT integration, and support multiple standard
-                    protocols while ensuring consis- tency with legacy systems \cvSkills{Kotlin,
-                      Groovy, Swagger, Ratpack, Docker, Git}
+                \item Extended and maintained proxy and upstream services to orchestrate backend
+                      calls, enable third-party IoT integration, and support multiple standard
+                      protocols while ensuring consis- tency with legacy systems \cvSkills{Kotlin,
+                        Groovy, Swagger, Ratpack, Docker, Git}
 
-            \end{itemize}
+              \end{itemize}
 
-            %-------------------------------------------------------------------
-      \item Internal project\\\cvTimeLapse{\cvDate{1}{2026}}{\cvDate{2}{2026}}
+              %-------------------------------------------------------------------
+        \item Internal project\\\cvTimeLapse{\cvDate{1}{2026}}{\cvDate{2}{2026}}
 
-            \begin{itemize}
+              \begin{itemize}
 
-              \item Optimized data retrieval by implementing pagination and enhanced system
-                    reliability through integration testing \cvSkills{Spring Boot, Kotlin, JUnit5,
-                      DynamoDB, AWS, Testcontainers, Git}
+                \item Optimized data retrieval by implementing pagination and enhanced system
+                      reliability through integration testing \cvSkills{Spring Boot, Kotlin, JUnit5,
+                        DynamoDB, AWS, Testcontainers, Git}
 
-              \item Planned and started refactoring of the authentication architecture to decouple
-                    the SSO system, facilitating provider switching \cvSkills{Spring Boot, Kotlin,
-                      Git}
+                \item Planned and started refactoring of the authentication architecture to decouple
+                      the SSO system, facilitating provider switching \cvSkills{Spring Boot, Kotlin,
+                        Git}
 
-            \end{itemize}
+              \end{itemize}
 
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
-  \begin{cvJob}
-    \cvPosition{Software Developer Engineer}{Dualboot Partners}
-    \cvLocation{Remote}{\cvDate{6}{2023}}{\cvDate{2}{2024}}
+  \onJava{%
+    \begin{cvJob}
+      \cvPosition{Software Developer Engineer}{Dualboot Partners}
+      \cvLocation{Remote}{\cvDate{6}{2023}}{\cvDate{2}{2024}}
 
-    \begin{itemize}
+      \begin{itemize}
 
-      \item Staff augmentation, Delivery Services Provider -- \emph{Marketplace Integration
-              Team}, \emph{US Client}
+        \item Staff augmentation, Delivery Services Provider -- \emph{Marketplace Integration
+                Team}, \emph{US Client}
 
-            \begin{itemize}
+              \begin{itemize}
 
-              \item Participated in the definition and development of integrations with external
-                    vendors, customization, feature implementation, and bug-fixing \cvSkills{Scala,
-                      Kotlin, Micronaut, MySQL, PostgreSQL, Docker, Git, JavaScript}
+                \item Participated in the definition and development of integrations with external
+                      vendors, customization, feature implementation, and bug-fixing \cvSkills{Scala,
+                        Kotlin, Micronaut, MySQL, PostgreSQL, Docker, Git, JavaScript}
 
-              \item Deployed to production and lower environments, monitor correct behavior
-                    \cvSkills{Jenkins, Docker, GitHub Actions, Grafana}
+                \item Deployed to production and lower environments, monitor correct behavior
+                      \cvSkills{Jenkins, Docker, GitHub Actions, Grafana}
 
-              \item Offered support to the \emph{Market Operations Team}
+                \item Offered support to the \emph{Market Operations Team}
 
-              \item Prepared base \emph{mountebank} configuration for usage as part of automated
-                    tests \cvSkills{Mountebank, Docker, GitHub Actions}
+                \item Prepared base \emph{mountebank} configuration for usage as part of automated
+                      tests \cvSkills{Mountebank, Docker, GitHub Actions}
 
-            \end{itemize}
+              \end{itemize}
 
-    \end{itemize}
-  \end{cvJob}
+      \end{itemize}
+    \end{cvJob}
+  }
 
   %-----------------------------------------------------------------------------
   \begin{cvJob}
@@ -237,6 +284,7 @@
   \begin{cvJob}
     \cvPosition{Java Software Developer}{Scanntech}
     \cvLocation{Montevideo, Uruguay}{\cvDate{8}{2014}}{\cvDate{4}{2018}}
+
     \begin{itemize}
 
       \item Contributed to the iPOS Android project, enhancing application logic, managing
@@ -366,9 +414,13 @@
 \end{cvExperience}
 
 %-------------------------------------------------------------------------------
+\cvEducationBlock%
+
+%-------------------------------------------------------------------------------
 \begin{cvLanguage}
   \cvLanguageItem{Spanish}{Native}
   \cvLanguageItem{English}{Reading/Listening: C1-C2, Speaking: B1-B2}
 \end{cvLanguage}
 
+%-------------------------------------------------------------------------------
 \end{document}

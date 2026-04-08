@@ -1,0 +1,55 @@
+\newcommand{\singleProfile}{%
+    \ifcpp%
+        \generalfalse%
+        \javafalse%
+        \mobilefalse%
+    \else
+        \ifjava%
+            \generalfalse%
+            \cppfalse%
+            \mobilefalse%
+        \else
+            \ifmobile%
+                \generalfalse%
+                \cppfalse%
+                \javafalse%
+            \else
+                \generaltrue%
+            \fi
+        \fi
+    \fi
+}
+
+\newcommand{\onGeneral}[1]{%
+    \ifgeneral%
+        #1%
+    \fi
+}
+
+\newcommand{\onlyCpp}[1]{%
+    \ifcpp%
+        #1%
+    \fi
+}
+
+\newcommand{\onCpp}[1]{%
+    \ifcpp%
+        #1%
+    \else
+        \onGeneral{#1}%
+    \fi
+}
+
+\newcommand{\onlyJava}[1]{
+    \ifjava%
+        #1%
+    \fi
+}
+
+\newcommand{\onJava}[1]{
+    \ifjava%
+        #1%
+    \else
+        \onGeneral{#1}%
+    \fi
+}
