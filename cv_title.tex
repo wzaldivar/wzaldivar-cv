@@ -94,11 +94,13 @@
 \newcommand{\cvTitle}{%
   \begin{center}
     {\Large\textbf{\cvAuthorVar}}
-    \vspace{8pt}
+    \ifcontactInfo%
+      \vspace{8pt}
 
-    \begin{tabular}{ll}
-      \cvTitleEmail& \cvTitlePhone\\%
-      \cvTitleLinkedin& \cvTitleAuthorLocation%
-    \end{tabular}
+      \begin{tabular}{ll}
+        \cvTitleEmail    & \cvTitlePhone          \\
+        \cvTitleLinkedin & \cvTitleAuthorLocation
+      \end{tabular}
+    \fi
   \end{center}
 }
